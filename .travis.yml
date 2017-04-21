@@ -3,11 +3,12 @@ dist: trusty
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
 script:
-- pdflatex -interaction=nonstopmode -halt-on-error Formelsammlung.tex
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build Formelsammlung.tex
 deploy:
   provider: releases
   api_key:
     secure: gtQYrapnvo8TAtzz1llZRV3S/6L2AGYO5efgA1E43u+vQjWYUpI9SFLl9VEQmZPaMdQhqgLG5kLoD/NDpLH5mArZgRn4iKfMddb/nHsJrTB2uPAXaFlnn4lDWvU4FYs6lisf+WhfrwGssuwFagg/LMwzS2HnPxxu9gW5Qs2Jqwq2ewFA8zr4zIeq695Nl/EMU0anXMoFMHtiBuqK9YTrsO2/Dnp74hwulmwE4ql4VDFjFuwIl2CfkO/bRJpzficcUog4HiQa9xq7rL925vVyQ1GkwzWqIMLprsmAW/89DojeSlxkKpBq5iNO44RFrsd41f89WSD7xIN1cOdXypYr+e3RkD95TZKwae5Wf7dlvujfqDKlG1CJ9aJXS8v0hzSudu/Jf60OLWUdIcm3NxQ3kDT0RhS2axuhohJHVzrGRbu6MX705sjC6JSwvXVldXEgnZpP+ZbZyCcnotXTUveJVEEzJYyEAoYgr3686bZPNJxxU7tbsRhCfHgyuM+1xbW5FXlR7tfAM+Vd18bjfd+EVFI4RZMtTkDmvYC6JFtHkKr0/DemXPi5LWwmQM8AH8Eph6qs/NIEY0cEzQD+62rFF42cYjN4SH50UXYemMgmSHq3qaRsGQk7cF2wgrQVNv/dlpbSFDsxYuRC3MJe5xxu66sHIbWme8WttIJ+mnuLh9M=
-  file: Formelsammlung.pdf
+  file: _build/Formelsammlung.pdf
+  skip_cleanup: true
   on:
     repo: innerjoin/PhAI-Formulary
