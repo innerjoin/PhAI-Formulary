@@ -2,10 +2,10 @@ sudo: required
 dist: trusty
 before_install:
 - sudo apt-get update -qq
-- sudo apt-get install texlive-latex-base
+- sudo apt-get install -y --no-install-recommends texlive-latex-base
 script:
 - mkdir _build
-- pdflatex -output-directory _build Formelsammlung.tex
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build Formelsammlung.tex
 deploy:
   provider: releases
   api_key:
