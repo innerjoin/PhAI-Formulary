@@ -5,7 +5,7 @@ before_install:
 - sudo apt-get install texlive-latex-base
 script:
 - mkdir _build
-- pdflatex -output-directory _build root.tex
+- pdflatex -output-directory _build Formelsammlung.tex
 deploy:
   provider: releases
   api_key:
