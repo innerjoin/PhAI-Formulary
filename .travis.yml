@@ -4,7 +4,7 @@ before_install:
 - sudo apt-get update -qq
 - sudo apt-get install -y --no-install-recommends texlive-latex-base
 script:
-- cat *.tex | sed -n 's~^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$~\1.sty~p'|while read file; do tlmgr install $file; done
+- sudo apt-get install $( cat *.tex | sed -n 's/^[^%]*\\usepackage[^{]*{\([^}]*\)}.*$/tex\(\1.sty\)/p' | paste -sd ' ' - )
 - mkdir _build
 - pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build Formelsammlung.tex
 deploy:
