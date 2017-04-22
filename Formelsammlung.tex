@@ -1,13 +1,42 @@
-\documentclass{article}
+% set the document type and base font size
+\documentclass[17pt]{extarticle}
+
+% Geometry package supports custom border and format definitions
+\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+% extsizes package allows to set the base font size to 8-20 pixels (https://ctan.org/pkg/extsizes)
+\usepackage{extsizes}
+
+\usepackage{amsmath}
+
+% document meta information
 \author{Lukas Steiger}
 \title{HSR Formelsammlung PhAI}
 \date{20.4.17}
+
+% start of the document content
 \begin{document}
-	\part{HSR Formelsammlung PhAI}
-	Kraft
-	\begin{equation}
+\begin{center}
+	\huge{HSR Formelsammlung PhAI}
+\end{center}
+	
+\section{Grundlagen - Bewegung und Kräfte}
+	
+	Kraft \small{(Newtonsches Bewegungsgesetz)}
+	\begin{align}
 		F = m * a
-	\end{equation}
+	\end{align}
+	
+	Schwerkraft \small{(Gravitationskraft)}
+	\begin{align}
+		&F_{G} = m * g
+		&&g = 9.81 \frac{m}{s^{2}} 
+	\end{align}
+
+	Zurückgelegte Strecke
+	\begin{align}
+		s(t) = s_{0} + v_{0} * t + \frac{a}{2} * t^{2}
+	\end{align}
+	
 \end{document}
 
 
