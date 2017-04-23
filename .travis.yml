@@ -5,7 +5,8 @@ before_install:
 - sudo apt-get install -y --no-install-recommends  texlive-full
 script:
 - mkdir _build
-- TEXINPUTS=$PWD//:$TEXINPUTS: pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build Formelsammlung.tex
+- export TEXINPUTS="$(pwd)//:"
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build Formelsammlung.tex
 deploy:
   provider: releases
   api_key:
