@@ -5,8 +5,19 @@
 \usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 % extsizes package allows to set the base font size to 8-20 pixels (https://ctan.org/pkg/extsizes)
 \usepackage{extsizes}
-
+% remove limitation to ascii by introducing UTF8 support 
+\usepackage[utf8]{inputenc}
+% enables support for the german 'Umlaute': ä, ö, ü
+\usepackage[T1]{fontenc}
+% mathematical expressions with tabstop support (https://texblog.org/2008/10/01/adding-normal-text-into-formulas/)
 \usepackage{amsmath}
+% text coloring, obviously
+\usepackage{color}
+% import and positioning of pictures and graphics
+\usepackage{graphicx}
+
+% disable indentation for new paragraphs
+\setlength{\parindent}{0pt}
 
 % document meta information
 \author{Lukas Steiger}
@@ -20,6 +31,11 @@
 \end{center}
 	
 \section{Grundlagen - Bewegung und Kräfte}
+
+	Geschwindigkeit
+	\begin{align}
+		v = v_{0} * a * t
+	\end{align}
 	
 	Kraft \small{(Newtonsches Bewegungsgesetz)}
 	\begin{align}
@@ -31,12 +47,12 @@
 		&F_{G} = m * g
 		&&g = 9.81 \frac{m}{s^{2}} 
 	\end{align}
-
-	Zurückgelegte Strecke
-	\begin{align}
-		s(t) = s_{0} + v_{0} * t + \frac{a}{2} * t^{2}
-	\end{align}
 	
+	Zurückgelegte Strecke \small{($s_{0}$ oder $v_{0}*t$ weglassen, falls 0)}
+	\begin{align}
+		&s(t) = s_{0} + v_{0} * t + \frac{a}{2} * t^{2}
+		&&\text{\small{oder einfach}}
+		&&&s = v * t
+	\end{align}
+
 \end{document}
-
-
