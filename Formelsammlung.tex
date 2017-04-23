@@ -27,7 +27,8 @@
 % start of the document content
 \begin{document}
 \begin{center}
-	\huge{HSR Formelsammlung PhAI}
+	\huge{HSR Formelsammlung PhAI} \\
+	\small{Autor: Lukas Steiger}
 \end{center}
 	
 \section{Grundlagen - Bewegung und Kräfte}
@@ -39,7 +40,8 @@
 	
 	Kraft \small{(Newtonsches Bewegungsgesetz)}
 	\begin{align}
-		F = m * a
+		&F = m * a
+		&&F = m * g
 	\end{align}
 	
 	Schwerkraft \small{(Gravitationskraft)}
@@ -90,7 +92,7 @@
 		d = \frac{v_{0}^{2} * \sin(2\varphi)}{g}
 	\end{align}
 
-\section{Kräfte, Arbeit \& Leistung}
+\section{Kräfte, Arbeit, Leistung \& Energie}
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=8cm]{./img/Haftreibung.png}
@@ -113,11 +115,52 @@
 		&&\mu_{G} = \text{Gleitreibungskoeffizient}		
 	\end{align}
 
-	Mechanische Arbeit
+	Mechanische Arbeit \small{($1J = 1Nm = \frac{1*kg m^{2}}{s^{2}}$)}
 	\begin{align}
-		W = F * s
+		&W = F * s 
+		&&W = m * g * h = \varrho * V * m * g
 	\end{align}
 
+	Energieerhaltung
+	\begin{align}
+		E_{pot} + E_{kin} = \text{konstant}
+	\end{align}
+	
+	Potentielle Energie
+	\begin{align}
+		&\text{geleistete Arbeit} 
+		&&W = E_{pot} 
+		&&&\text{potentielle Energie}
+	\end{align}
+	
+	Kinetische Energie
+	\begin{align}
+		E_{kin} = \frac{1}{2} * m * v^{2}
+	\end{align}
+	
+	Federenergie
+	\begin{align}
+		&E_{pot} = \frac{1}{2} * k * x^{2}
+		&&k = \textcolor{red}{WAS??}
+		&&&x = \text{Ausdehnung Feder}
+	\end{align}
+	
+	Leistung \small(Arbeit pro Zeiteinheit in $J/s$)
+	\begin{align}
+		P = F * v = m * a^{2} * t
+	\end{align}
+	
+	Impuls / Gesamtimpuls
+	\begin{align}
+		&p = m * v
+		&&P = p_{1} + p_{2} + ... + p_{n}
+	\end{align}
+	
+	Schwerpunktgeschwindigkeit
+	\begin{align}
+		u = \frac{p_{1} + p_{2} + ... + p_{n}}{m_{1} + m_{2} + ... + m_{n}}
+	\end{align}
+	
 \section{Repetition - Trigonometrie}
 	\begin{align}
 		&\sin \alpha = \frac{a}{c}
@@ -133,8 +176,9 @@
 	\color{red}
 	\begin{itemize}
 		\item All de Integral Gugus vo SW02
-		\item Relativ/tatsächliche Beschleunigung/Geschwindigkeit (SW02)
-		\item Kreisbewegung und Winkelgeschwindigkeit (SW02)
+		\item Relative/tatsächliche Beschleunigung/Geschwindigkeit (SW02)
+		\item Kreisbewegung, Winkelgeschwindigkeit (SW02)
+		\item Drehmoment ... (SW07?)
 		\item Alles wo mer nanig gha hend :-)
 	\end{itemize}
 \end{document}
