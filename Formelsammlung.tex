@@ -19,6 +19,10 @@
 % disable indentation for new paragraphs
 \setlength{\parindent}{0pt}
 
+% some neaty shortcuts
+%% normalize a vector
+\newcommand{\norm}[1]{\lvert #1 \rvert}
+
 % document meta information
 \author{Lukas Steiger}
 \title{HSR Formelsammlung PhAI}
@@ -124,6 +128,60 @@
 		d = \frac{v_{0}^{2} * \sin(2\varphi)}{g}
 	\end{align}
 
+
+\section{Vektoren}
+	Normalenvektor
+	\begin{align}
+		&\vec{n} =
+		\begin{pmatrix} a \\ b \\ c \end{pmatrix}		
+		&&wenn: ax + by + cz + d = 0
+	\end{align}
+	
+	Normalenvektor skalieren
+	\begin{align}
+		\vec{n} = \frac{1}{\norm{\vec{w}}} \vec{w}
+	\end{align}
+
+	Addition / Subtraktion
+	\begin{align}	
+		\vec{a} \pm \vec{b} = 
+		\begin{pmatrix} a_x \\ a_y \end{pmatrix}
+		\pm
+		\begin{pmatrix} b_x \\ b_y \end{pmatrix}
+		=
+		\begin{pmatrix} a_x \pm b_x \\ a_y \pm b_y \end{pmatrix}
+	\end{align}
+	
+	Skalarprodukt 	
+	\begin{align}	
+	\vec{a} * \vec{b} = 
+	\begin{pmatrix} a_x \\ a_y \end{pmatrix}
+	*
+	\begin{pmatrix} b_x \\ b_y \end{pmatrix}
+	= a_x * b_x + a_y * b_y
+	\end{align}
+	
+	Betrag / Länge / Fläche
+	\begin{align}
+		\norm{\vec{a}} = \sqrt{a_x^2 + a_y^2}
+	\end{align}
+	
+	Winkel zwischen zwei Vektoren
+	\begin{align}
+		&\cos \phi = \frac{\vec{a} * \vec{b}}{\norm{\vec{a}} \norm{\vec{b}}}
+		&&\phi = \arctan(\cos \phi)
+	\end{align}
+	
+	Vektorprodukt / Kreuzprodukt
+	\begin{align}
+		\vec{a} x \vec{b} = 
+		\begin{pmatrix} a_x \\ a_y \\ a_z \end{pmatrix}
+		x
+		\begin{pmatrix} b_x \\ b_y \\ b_z \end{pmatrix}
+		=
+		\begin{pmatrix} a_y b_z - a_z b_y \\ a_z b_x - a_x b_z \\ a_x b_y - a_y b_x \end{pmatrix}
+	\end{align}
+	
 \section{Kräfte, Arbeit, Leistung \& Energie}
 	\begin{figure}[h!]
 		\centering
