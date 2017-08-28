@@ -77,6 +77,10 @@
 		s_{0} = D_{min} + \frac{v_{B}^2 t_{A}}{2 v_{A}}
 	\end{align}
 	
+	Endgeschwindigkeit Freier Fall
+	\begin{align}
+		v = \sqrt{2 g h}
+	\end{align}
 	
 	\section{Bewegung}
 	Winkelgeschwindigkeit
@@ -210,7 +214,7 @@
 		W = F * s
 	\end{align}
 	\begin{align}
-		W = m g h = m g \varrho V = (\sin \alpha + \mu_R \cos \alpha) * F_G s
+		W = m g h = \varrho V g h = (\sin \alpha + \mu_R \cos \alpha) * F_G s = (1 + \mu * cot \alpha) * F_G * h
 	\end{align}
 
 	Energieerhaltung
@@ -237,9 +241,16 @@
 		&&&x = \text{Ausdehnung Feder}
 	\end{align}
 	
-	Leistung \small(Arbeit pro Zeiteinheit in $J/s$)
+	Wärmeenergie
 	\begin{align}
-		P = F * v = m * a^{2} * t
+		&Q = \frac{\mu * v_R^2}{2}
+		&&\mu = \frac{m_1 m_2}{m_1 + m_2}
+		&&&v_R = v_1 - v_2
+	\end{align}
+	
+	Leistung \small(Arbeit pro Zeiteinheit in $J/s = W$ )
+	\begin{align}
+		P = \frac{\Delta W}{\Delta t} = F * v = m * a^{2} * t
 	\end{align}
 	
 	Impuls / Gesamtimpuls
@@ -251,6 +262,12 @@
 	Schwerpunktgeschwindigkeit
 	\begin{align}
 		u = \frac{p_{1} + p_{2} + ... + p_{n}}{m_{1} + m_{2} + ... + m_{n}}
+	\end{align}
+	
+	Zentripetalkraft
+	\begin{align}
+		&F_Z = \frac{m v^2}{r}
+		&& r = Radius (Länge)
 	\end{align}
 	
 \section{Dynamik}
