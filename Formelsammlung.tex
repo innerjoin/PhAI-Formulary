@@ -15,7 +15,7 @@
 \usepackage{color}
 % import and positioning of pictures and graphics
 \usepackage{graphicx}
-
+\usepackage{gensymb}
 % disable indentation for new paragraphs
 \setlength{\parindent}{0pt}
 
@@ -115,7 +115,9 @@
 	\end{align}
 	
 	Wurfweite
-	\textcolor{red}{Gibts da eine Formel?}
+	\begin{align}
+		x = \sqrt{\frac{2 * v_0^2 * y}{g}}
+	\end{align}
 	
 	\subsection{Schiefer Wurf}
 	\begin{align}
@@ -129,7 +131,8 @@
 	
 	Wurfweite
 	\begin{align}
-		d = \frac{v_{0}^{2} * \sin(2\varphi)}{g}
+		&d = \frac{v_{0}^{2} * \sin(2\varphi)}{g}
+		&&d_{max}: \alpha = 45\degree
 	\end{align}
 
 
@@ -191,6 +194,11 @@
 		\centering
 		\includegraphics[width=8cm]{img/Haftreibung.png}
 	\end{figure}
+
+	Steigungswinkel
+	\begin{align}
+		\alpha = \arctan(\frac{S}{100\%}) 
+	\end{align}
 	
 	Normalkraft
 	\begin{align}
@@ -248,14 +256,14 @@
 		&&&v_R = v_1 - v_2
 	\end{align}
 	
-	Leistung \small(Arbeit pro Zeiteinheit in $J/s = W$ )
+	Leistung \small(Arbeit pro Zeiteinheit in $J/s = W | 1kW = 1.36 PS$ )
 	\begin{align}
 		P = \frac{\Delta W}{\Delta t} = F * v = m * a^{2} * t
 	\end{align}
 	
 	Impuls / Gesamtimpuls
 	\begin{align}
-		&p = m * v
+		&p = m * v = F * \Delta t
 		&&P = p_{1} + p_{2} + ... + p_{n}
 	\end{align}
 	
@@ -264,10 +272,42 @@
 		u = \frac{p_{1} + p_{2} + ... + p_{n}}{m_{1} + m_{2} + ... + m_{n}}
 	\end{align}
 	
-	Zentripetalkraft
+	Zentripetalkraft (nach innen gerichtet)
 	\begin{align}
 		&F_Z = \frac{m v^2}{r}
 		&& r = Radius (Länge)
+	\end{align}
+	
+	Umlaufzeit [s]
+	\begin{align}
+		T = \frac{2 \pi}{\omega}  = \frac{1}{f}
+	\end{align}
+	
+	Frequenz [1/s]
+	\begin{align}
+		f = \frac{1}{T} = \frac{\omega}{2 \pi}
+	\end{align}
+	
+	Zentrifugalkraft (nach aussen gerichtet)
+	\begin{align}
+		&F = m * \frac{v^2}{r} = m r \omega^2 = \frac{m * 4 \pi^2 * r}{T^2}
+		&&\omega = 2 \pi f
+	\end{align}
+	\begin{align}
+		& f = Frequenz [1/s]
+		&& r = Radius (Länge)
+	\end{align}
+	
+	Gravitationskonstante
+	\begin{align}
+		G = 6.672 * 10^{11} \frac{m^3}{kg*s^2}
+	\end{align}
+	
+	Gravitationskraft
+	\begin{align}
+		&F = \frac{G * m * M}{r^2}
+		&&m: 1. Masse, M: 2. Masse
+		&&&r: Abstand zwischen Massepunkten
 	\end{align}
 	
 \section{Dynamik}
@@ -295,7 +335,7 @@
 		\omega = \omega_{0} + \alpha * t = \omega_{0} + \frac{M}{J} * t
 	\end{align}
 	
-	Drehzahl
+	Drehzahl [\frac{1}{s}]
 	\begin{align}
 		\upsilon = \frac{\omega}{2 * \pi} = \upsilon_{0} + \frac{M}{2\pi * J} * t 
 	\end{align}
