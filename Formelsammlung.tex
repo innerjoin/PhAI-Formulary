@@ -312,12 +312,10 @@
 	
 \section{Dynamik}
 	Drehmoment
-	
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=4cm]{img/Drehmoment.png}
 	\end{figure}
-
 
 	\begin{align}
 		&M = x*F_{G}
@@ -355,9 +353,14 @@
 		P = M * \omega
 	\end{align}
 	
+	Druck (= Kraft pro Fläche)
+	\begin{align}
+		p = \frac{F}{A}
+	\end{align}	
+	
 	Schweredruck 
 	\begin{align}
-		&p = p_0 * \varrho g h
+		&\Delta p = p_0 * \varrho g \Delta h
 		&&p_0 z.B. Luftdruck 
 		&&&1 bar = 100'000 Pa
 	\end{align}
@@ -377,19 +380,22 @@
 	
 	
 \section{Thermodynamik}
+	
+
+
 	Laminare Strömung im Rohr (Hagen Poiseuille)
 	\begin{align}
 		V = \frac{\pi * \Delta p * t * R^4}{8 * \eta * l}
 	\end{align}
 	\begin{align}
-		&V: Volumen der Flüssigkeit
-		&&R: Radius des Rohres
-		&&&\Delta p: Druckdifferenz Rohrenden
+		&V: \text{Volumen der Flüssigkeit}
+		&&R: \text{Radius des Rohres}
+		&&&\Delta p: \text{Druckdifferenz Rohrenden}
 	\end{align}
 	\begin{align}
-		&&&&t: Dauer des Flusses
-		&&&&&l: Rohrlänge
-		&&&&&&\eta: dyn. Viskosität (konst.)
+		&&&&t: \text{Dauer des Flusses}
+		&&&&&l: \text{Rohrlänge}
+		&&&&&&\eta: \text{dyn. Viskosität (konst.)}
 	\end{align}
 
 	Termperatureinheiten
@@ -397,6 +403,43 @@
 		T_{Kelvin} = T_{Celsius} + 273.15
 		T_{Fahrenheit} = T_{Celsius} * 1.8 + 32
 	\end{align}
+
+
+\subsection{Molare Grössen}
+	\begin{align}
+		&n: \text{Stoffmenge}
+		&&v: \text{spez. Volumen = V/m}
+		&&&p: \text{Absolutdruck}
+	\end{align}
+	\begin{align}
+		&N: \text{Anzahl Teilchen}
+		&&T: \text{Temperatur in Kelvin}
+	\end{align}
+	\begin{align}
+		k_B: \text{Boltzmann K. =} 1.381 * 10^{-23}
+	\end{align}
+	\begin{align}		
+		R: \text{Gas K. =} k_B * N_A = 8.314 J/mol K
+	\end{align}
+	\begin{align}
+		N_A: \text{Avogadro K. =} 6.02 * 10^{23} mol-1
+	\end{align}
+
+	molare Masse [kg/mol]
+	\begin{align}
+		M = \frac{m}{n}
+	\end{align}
+
+	molares Volumen [$m^3/mol$]
+	\begin{align}
+		V_m = \frac{V}{n}
+	\end{align}
+	
+	stoffbezogene Zustandsgleichung
+	\begin{align}
+		pV = n R T = N k_B T
+	\end{align}
+	
 \section{Repetition - Trigonometrie}
 	\begin{align}
 		\sin \alpha = \frac{a}{c} = \pm \sqrt{1 - \cos^2 \alpha}
